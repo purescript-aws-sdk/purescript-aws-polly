@@ -106,7 +106,7 @@ Encode DeleteLexiconOutput
 
 ``` purescript
 newtype DescribeVoicesInput
-  = DescribeVoicesInput { "LanguageCode" :: NullOrUndefined (LanguageCode), "NextToken" :: NullOrUndefined (NextToken) }
+  = DescribeVoicesInput { "LanguageCode" :: Maybe (LanguageCode), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -129,7 +129,7 @@ Constructs DescribeVoicesInput from required parameters
 #### `newDescribeVoicesInput'`
 
 ``` purescript
-newDescribeVoicesInput' :: ({ "LanguageCode" :: NullOrUndefined (LanguageCode), "NextToken" :: NullOrUndefined (NextToken) } -> { "LanguageCode" :: NullOrUndefined (LanguageCode), "NextToken" :: NullOrUndefined (NextToken) }) -> DescribeVoicesInput
+newDescribeVoicesInput' :: ({ "LanguageCode" :: Maybe (LanguageCode), "NextToken" :: Maybe (NextToken) } -> { "LanguageCode" :: Maybe (LanguageCode), "NextToken" :: Maybe (NextToken) }) -> DescribeVoicesInput
 ```
 
 Constructs DescribeVoicesInput's fields from required parameters
@@ -138,7 +138,7 @@ Constructs DescribeVoicesInput's fields from required parameters
 
 ``` purescript
 newtype DescribeVoicesOutput
-  = DescribeVoicesOutput { "Voices" :: NullOrUndefined (VoiceList), "NextToken" :: NullOrUndefined (NextToken) }
+  = DescribeVoicesOutput { "Voices" :: Maybe (VoiceList), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -161,7 +161,7 @@ Constructs DescribeVoicesOutput from required parameters
 #### `newDescribeVoicesOutput'`
 
 ``` purescript
-newDescribeVoicesOutput' :: ({ "Voices" :: NullOrUndefined (VoiceList), "NextToken" :: NullOrUndefined (NextToken) } -> { "Voices" :: NullOrUndefined (VoiceList), "NextToken" :: NullOrUndefined (NextToken) }) -> DescribeVoicesOutput
+newDescribeVoicesOutput' :: ({ "Voices" :: Maybe (VoiceList), "NextToken" :: Maybe (NextToken) } -> { "Voices" :: Maybe (VoiceList), "NextToken" :: Maybe (NextToken) }) -> DescribeVoicesOutput
 ```
 
 Constructs DescribeVoicesOutput's fields from required parameters
@@ -234,7 +234,7 @@ Constructs GetLexiconInput's fields from required parameters
 
 ``` purescript
 newtype GetLexiconOutput
-  = GetLexiconOutput { "Lexicon" :: NullOrUndefined (Lexicon), "LexiconAttributes" :: NullOrUndefined (LexiconAttributes) }
+  = GetLexiconOutput { "Lexicon" :: Maybe (Lexicon), "LexiconAttributes" :: Maybe (LexiconAttributes) }
 ```
 
 ##### Instances
@@ -257,7 +257,7 @@ Constructs GetLexiconOutput from required parameters
 #### `newGetLexiconOutput'`
 
 ``` purescript
-newGetLexiconOutput' :: ({ "Lexicon" :: NullOrUndefined (Lexicon), "LexiconAttributes" :: NullOrUndefined (LexiconAttributes) } -> { "Lexicon" :: NullOrUndefined (Lexicon), "LexiconAttributes" :: NullOrUndefined (LexiconAttributes) }) -> GetLexiconOutput
+newGetLexiconOutput' :: ({ "Lexicon" :: Maybe (Lexicon), "LexiconAttributes" :: Maybe (LexiconAttributes) } -> { "Lexicon" :: Maybe (Lexicon), "LexiconAttributes" :: Maybe (LexiconAttributes) }) -> GetLexiconOutput
 ```
 
 Constructs GetLexiconOutput's fields from required parameters
@@ -266,7 +266,7 @@ Constructs GetLexiconOutput's fields from required parameters
 
 ``` purescript
 newtype InvalidLexiconException
-  = InvalidLexiconException { message :: NullOrUndefined (ErrorMessage) }
+  = InvalidLexiconException { message :: Maybe (ErrorMessage) }
 ```
 
 <p>Amazon Polly can't find the specified lexicon. Verify that the lexicon's name is spelled correctly, and then try again.</p>
@@ -291,7 +291,7 @@ Constructs InvalidLexiconException from required parameters
 #### `newInvalidLexiconException'`
 
 ``` purescript
-newInvalidLexiconException' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> InvalidLexiconException
+newInvalidLexiconException' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> InvalidLexiconException
 ```
 
 Constructs InvalidLexiconException's fields from required parameters
@@ -300,7 +300,7 @@ Constructs InvalidLexiconException's fields from required parameters
 
 ``` purescript
 newtype InvalidNextTokenException
-  = InvalidNextTokenException { message :: NullOrUndefined (ErrorMessage) }
+  = InvalidNextTokenException { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The NextToken is invalid. Verify that it's spelled correctly, and then try again.</p>
@@ -325,7 +325,7 @@ Constructs InvalidNextTokenException from required parameters
 #### `newInvalidNextTokenException'`
 
 ``` purescript
-newInvalidNextTokenException' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> InvalidNextTokenException
+newInvalidNextTokenException' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> InvalidNextTokenException
 ```
 
 Constructs InvalidNextTokenException's fields from required parameters
@@ -334,7 +334,7 @@ Constructs InvalidNextTokenException's fields from required parameters
 
 ``` purescript
 newtype InvalidSampleRateException
-  = InvalidSampleRateException { message :: NullOrUndefined (ErrorMessage) }
+  = InvalidSampleRateException { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The specified sample rate is not valid.</p>
@@ -359,7 +359,7 @@ Constructs InvalidSampleRateException from required parameters
 #### `newInvalidSampleRateException'`
 
 ``` purescript
-newInvalidSampleRateException' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> InvalidSampleRateException
+newInvalidSampleRateException' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> InvalidSampleRateException
 ```
 
 Constructs InvalidSampleRateException's fields from required parameters
@@ -368,7 +368,7 @@ Constructs InvalidSampleRateException's fields from required parameters
 
 ``` purescript
 newtype InvalidSsmlException
-  = InvalidSsmlException { message :: NullOrUndefined (ErrorMessage) }
+  = InvalidSsmlException { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The SSML you provided is invalid. Verify the SSML syntax, spelling of tags and values, and then try again.</p>
@@ -393,7 +393,7 @@ Constructs InvalidSsmlException from required parameters
 #### `newInvalidSsmlException'`
 
 ``` purescript
-newInvalidSsmlException' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> InvalidSsmlException
+newInvalidSsmlException' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> InvalidSsmlException
 ```
 
 Constructs InvalidSsmlException's fields from required parameters
@@ -466,7 +466,7 @@ Encode LexemesCount
 
 ``` purescript
 newtype Lexicon
-  = Lexicon { "Content" :: NullOrUndefined (LexiconContent), "Name" :: NullOrUndefined (LexiconName) }
+  = Lexicon { "Content" :: Maybe (LexiconContent), "Name" :: Maybe (LexiconName) }
 ```
 
 <p>Provides lexicon name and lexicon content in string format. For more information, see <a href="https://www.w3.org/TR/pronunciation-lexicon/">Pronunciation Lexicon Specification (PLS) Version 1.0</a>.</p>
@@ -491,7 +491,7 @@ Constructs Lexicon from required parameters
 #### `newLexicon'`
 
 ``` purescript
-newLexicon' :: ({ "Content" :: NullOrUndefined (LexiconContent), "Name" :: NullOrUndefined (LexiconName) } -> { "Content" :: NullOrUndefined (LexiconContent), "Name" :: NullOrUndefined (LexiconName) }) -> Lexicon
+newLexicon' :: ({ "Content" :: Maybe (LexiconContent), "Name" :: Maybe (LexiconName) } -> { "Content" :: Maybe (LexiconContent), "Name" :: Maybe (LexiconName) }) -> Lexicon
 ```
 
 Constructs Lexicon's fields from required parameters
@@ -516,7 +516,7 @@ Encode LexiconArn
 
 ``` purescript
 newtype LexiconAttributes
-  = LexiconAttributes { "Alphabet" :: NullOrUndefined (Alphabet), "LanguageCode" :: NullOrUndefined (LanguageCode), "LastModified" :: NullOrUndefined (LastModified), "LexiconArn" :: NullOrUndefined (LexiconArn), "LexemesCount" :: NullOrUndefined (LexemesCount), "Size" :: NullOrUndefined (Size) }
+  = LexiconAttributes { "Alphabet" :: Maybe (Alphabet), "LanguageCode" :: Maybe (LanguageCode), "LastModified" :: Maybe (LastModified), "LexiconArn" :: Maybe (LexiconArn), "LexemesCount" :: Maybe (LexemesCount), "Size" :: Maybe (Size) }
 ```
 
 <p>Contains metadata describing the lexicon such as the number of lexemes, language code, and so on. For more information, see <a href="http://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html">Managing Lexicons</a>.</p>
@@ -541,7 +541,7 @@ Constructs LexiconAttributes from required parameters
 #### `newLexiconAttributes'`
 
 ``` purescript
-newLexiconAttributes' :: ({ "Alphabet" :: NullOrUndefined (Alphabet), "LanguageCode" :: NullOrUndefined (LanguageCode), "LastModified" :: NullOrUndefined (LastModified), "LexiconArn" :: NullOrUndefined (LexiconArn), "LexemesCount" :: NullOrUndefined (LexemesCount), "Size" :: NullOrUndefined (Size) } -> { "Alphabet" :: NullOrUndefined (Alphabet), "LanguageCode" :: NullOrUndefined (LanguageCode), "LastModified" :: NullOrUndefined (LastModified), "LexiconArn" :: NullOrUndefined (LexiconArn), "LexemesCount" :: NullOrUndefined (LexemesCount), "Size" :: NullOrUndefined (Size) }) -> LexiconAttributes
+newLexiconAttributes' :: ({ "Alphabet" :: Maybe (Alphabet), "LanguageCode" :: Maybe (LanguageCode), "LastModified" :: Maybe (LastModified), "LexiconArn" :: Maybe (LexiconArn), "LexemesCount" :: Maybe (LexemesCount), "Size" :: Maybe (Size) } -> { "Alphabet" :: Maybe (Alphabet), "LanguageCode" :: Maybe (LanguageCode), "LastModified" :: Maybe (LastModified), "LexiconArn" :: Maybe (LexiconArn), "LexemesCount" :: Maybe (LexemesCount), "Size" :: Maybe (Size) }) -> LexiconAttributes
 ```
 
 Constructs LexiconAttributes's fields from required parameters
@@ -566,7 +566,7 @@ Encode LexiconContent
 
 ``` purescript
 newtype LexiconDescription
-  = LexiconDescription { "Name" :: NullOrUndefined (LexiconName), "Attributes" :: NullOrUndefined (LexiconAttributes) }
+  = LexiconDescription { "Name" :: Maybe (LexiconName), "Attributes" :: Maybe (LexiconAttributes) }
 ```
 
 <p>Describes the content of the lexicon.</p>
@@ -591,7 +591,7 @@ Constructs LexiconDescription from required parameters
 #### `newLexiconDescription'`
 
 ``` purescript
-newLexiconDescription' :: ({ "Name" :: NullOrUndefined (LexiconName), "Attributes" :: NullOrUndefined (LexiconAttributes) } -> { "Name" :: NullOrUndefined (LexiconName), "Attributes" :: NullOrUndefined (LexiconAttributes) }) -> LexiconDescription
+newLexiconDescription' :: ({ "Name" :: Maybe (LexiconName), "Attributes" :: Maybe (LexiconAttributes) } -> { "Name" :: Maybe (LexiconName), "Attributes" :: Maybe (LexiconAttributes) }) -> LexiconDescription
 ```
 
 Constructs LexiconDescription's fields from required parameters
@@ -648,7 +648,7 @@ Encode LexiconNameList
 
 ``` purescript
 newtype LexiconNotFoundException
-  = LexiconNotFoundException { message :: NullOrUndefined (ErrorMessage) }
+  = LexiconNotFoundException { message :: Maybe (ErrorMessage) }
 ```
 
 <p>Amazon Polly can't find the specified lexicon. This could be caused by a lexicon that is missing, its name is misspelled or specifying a lexicon that is in a different region.</p> <p>Verify that the lexicon exists, is in the region (see <a>ListLexicons</a>) and that you spelled its name is spelled correctly. Then try again.</p>
@@ -673,7 +673,7 @@ Constructs LexiconNotFoundException from required parameters
 #### `newLexiconNotFoundException'`
 
 ``` purescript
-newLexiconNotFoundException' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> LexiconNotFoundException
+newLexiconNotFoundException' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> LexiconNotFoundException
 ```
 
 Constructs LexiconNotFoundException's fields from required parameters
@@ -682,7 +682,7 @@ Constructs LexiconNotFoundException's fields from required parameters
 
 ``` purescript
 newtype LexiconSizeExceededException
-  = LexiconSizeExceededException { message :: NullOrUndefined (ErrorMessage) }
+  = LexiconSizeExceededException { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The maximum size of the specified lexicon would be exceeded by this operation.</p>
@@ -707,7 +707,7 @@ Constructs LexiconSizeExceededException from required parameters
 #### `newLexiconSizeExceededException'`
 
 ``` purescript
-newLexiconSizeExceededException' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> LexiconSizeExceededException
+newLexiconSizeExceededException' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> LexiconSizeExceededException
 ```
 
 Constructs LexiconSizeExceededException's fields from required parameters
@@ -716,7 +716,7 @@ Constructs LexiconSizeExceededException's fields from required parameters
 
 ``` purescript
 newtype ListLexiconsInput
-  = ListLexiconsInput { "NextToken" :: NullOrUndefined (NextToken) }
+  = ListLexiconsInput { "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -739,7 +739,7 @@ Constructs ListLexiconsInput from required parameters
 #### `newListLexiconsInput'`
 
 ``` purescript
-newListLexiconsInput' :: ({ "NextToken" :: NullOrUndefined (NextToken) } -> { "NextToken" :: NullOrUndefined (NextToken) }) -> ListLexiconsInput
+newListLexiconsInput' :: ({ "NextToken" :: Maybe (NextToken) } -> { "NextToken" :: Maybe (NextToken) }) -> ListLexiconsInput
 ```
 
 Constructs ListLexiconsInput's fields from required parameters
@@ -748,7 +748,7 @@ Constructs ListLexiconsInput's fields from required parameters
 
 ``` purescript
 newtype ListLexiconsOutput
-  = ListLexiconsOutput { "Lexicons" :: NullOrUndefined (LexiconDescriptionList), "NextToken" :: NullOrUndefined (NextToken) }
+  = ListLexiconsOutput { "Lexicons" :: Maybe (LexiconDescriptionList), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -771,7 +771,7 @@ Constructs ListLexiconsOutput from required parameters
 #### `newListLexiconsOutput'`
 
 ``` purescript
-newListLexiconsOutput' :: ({ "Lexicons" :: NullOrUndefined (LexiconDescriptionList), "NextToken" :: NullOrUndefined (NextToken) } -> { "Lexicons" :: NullOrUndefined (LexiconDescriptionList), "NextToken" :: NullOrUndefined (NextToken) }) -> ListLexiconsOutput
+newListLexiconsOutput' :: ({ "Lexicons" :: Maybe (LexiconDescriptionList), "NextToken" :: Maybe (NextToken) } -> { "Lexicons" :: Maybe (LexiconDescriptionList), "NextToken" :: Maybe (NextToken) }) -> ListLexiconsOutput
 ```
 
 Constructs ListLexiconsOutput's fields from required parameters
@@ -780,7 +780,7 @@ Constructs ListLexiconsOutput's fields from required parameters
 
 ``` purescript
 newtype MarksNotSupportedForFormatException
-  = MarksNotSupportedForFormatException { message :: NullOrUndefined (ErrorMessage) }
+  = MarksNotSupportedForFormatException { message :: Maybe (ErrorMessage) }
 ```
 
 <p>Speech marks are not supported for the <code>OutputFormat</code> selected. Speech marks are only available for content in <code>json</code> format.</p>
@@ -805,7 +805,7 @@ Constructs MarksNotSupportedForFormatException from required parameters
 #### `newMarksNotSupportedForFormatException'`
 
 ``` purescript
-newMarksNotSupportedForFormatException' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> MarksNotSupportedForFormatException
+newMarksNotSupportedForFormatException' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> MarksNotSupportedForFormatException
 ```
 
 Constructs MarksNotSupportedForFormatException's fields from required parameters
@@ -814,7 +814,7 @@ Constructs MarksNotSupportedForFormatException's fields from required parameters
 
 ``` purescript
 newtype MaxLexemeLengthExceededException
-  = MaxLexemeLengthExceededException { message :: NullOrUndefined (ErrorMessage) }
+  = MaxLexemeLengthExceededException { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The maximum size of the lexeme would be exceeded by this operation.</p>
@@ -839,7 +839,7 @@ Constructs MaxLexemeLengthExceededException from required parameters
 #### `newMaxLexemeLengthExceededException'`
 
 ``` purescript
-newMaxLexemeLengthExceededException' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> MaxLexemeLengthExceededException
+newMaxLexemeLengthExceededException' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> MaxLexemeLengthExceededException
 ```
 
 Constructs MaxLexemeLengthExceededException's fields from required parameters
@@ -848,7 +848,7 @@ Constructs MaxLexemeLengthExceededException's fields from required parameters
 
 ``` purescript
 newtype MaxLexiconsNumberExceededException
-  = MaxLexiconsNumberExceededException { message :: NullOrUndefined (ErrorMessage) }
+  = MaxLexiconsNumberExceededException { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The maximum number of lexicons would be exceeded by this operation.</p>
@@ -873,7 +873,7 @@ Constructs MaxLexiconsNumberExceededException from required parameters
 #### `newMaxLexiconsNumberExceededException'`
 
 ``` purescript
-newMaxLexiconsNumberExceededException' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> MaxLexiconsNumberExceededException
+newMaxLexiconsNumberExceededException' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> MaxLexiconsNumberExceededException
 ```
 
 Constructs MaxLexiconsNumberExceededException's fields from required parameters
@@ -994,7 +994,7 @@ Encode SampleRate
 
 ``` purescript
 newtype ServiceFailureException
-  = ServiceFailureException { message :: NullOrUndefined (ErrorMessage) }
+  = ServiceFailureException { message :: Maybe (ErrorMessage) }
 ```
 
 <p>An unknown condition has caused a service failure.</p>
@@ -1019,7 +1019,7 @@ Constructs ServiceFailureException from required parameters
 #### `newServiceFailureException'`
 
 ``` purescript
-newServiceFailureException' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> ServiceFailureException
+newServiceFailureException' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> ServiceFailureException
 ```
 
 Constructs ServiceFailureException's fields from required parameters
@@ -1076,7 +1076,7 @@ Encode SpeechMarkTypeList
 
 ``` purescript
 newtype SsmlMarksNotSupportedForTextTypeException
-  = SsmlMarksNotSupportedForTextTypeException { message :: NullOrUndefined (ErrorMessage) }
+  = SsmlMarksNotSupportedForTextTypeException { message :: Maybe (ErrorMessage) }
 ```
 
 <p>SSML speech marks are not supported for plain text-type input.</p>
@@ -1101,7 +1101,7 @@ Constructs SsmlMarksNotSupportedForTextTypeException from required parameters
 #### `newSsmlMarksNotSupportedForTextTypeException'`
 
 ``` purescript
-newSsmlMarksNotSupportedForTextTypeException' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> SsmlMarksNotSupportedForTextTypeException
+newSsmlMarksNotSupportedForTextTypeException' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> SsmlMarksNotSupportedForTextTypeException
 ```
 
 Constructs SsmlMarksNotSupportedForTextTypeException's fields from required parameters
@@ -1110,7 +1110,7 @@ Constructs SsmlMarksNotSupportedForTextTypeException's fields from required para
 
 ``` purescript
 newtype SynthesizeSpeechInput
-  = SynthesizeSpeechInput { "LexiconNames" :: NullOrUndefined (LexiconNameList), "OutputFormat" :: OutputFormat, "SampleRate" :: NullOrUndefined (SampleRate), "SpeechMarkTypes" :: NullOrUndefined (SpeechMarkTypeList), "Text" :: Text, "TextType" :: NullOrUndefined (TextType), "VoiceId" :: VoiceId }
+  = SynthesizeSpeechInput { "LexiconNames" :: Maybe (LexiconNameList), "OutputFormat" :: OutputFormat, "SampleRate" :: Maybe (SampleRate), "SpeechMarkTypes" :: Maybe (SpeechMarkTypeList), "Text" :: Text, "TextType" :: Maybe (TextType), "VoiceId" :: VoiceId }
 ```
 
 ##### Instances
@@ -1133,7 +1133,7 @@ Constructs SynthesizeSpeechInput from required parameters
 #### `newSynthesizeSpeechInput'`
 
 ``` purescript
-newSynthesizeSpeechInput' :: OutputFormat -> Text -> VoiceId -> ({ "LexiconNames" :: NullOrUndefined (LexiconNameList), "OutputFormat" :: OutputFormat, "SampleRate" :: NullOrUndefined (SampleRate), "SpeechMarkTypes" :: NullOrUndefined (SpeechMarkTypeList), "Text" :: Text, "TextType" :: NullOrUndefined (TextType), "VoiceId" :: VoiceId } -> { "LexiconNames" :: NullOrUndefined (LexiconNameList), "OutputFormat" :: OutputFormat, "SampleRate" :: NullOrUndefined (SampleRate), "SpeechMarkTypes" :: NullOrUndefined (SpeechMarkTypeList), "Text" :: Text, "TextType" :: NullOrUndefined (TextType), "VoiceId" :: VoiceId }) -> SynthesizeSpeechInput
+newSynthesizeSpeechInput' :: OutputFormat -> Text -> VoiceId -> ({ "LexiconNames" :: Maybe (LexiconNameList), "OutputFormat" :: OutputFormat, "SampleRate" :: Maybe (SampleRate), "SpeechMarkTypes" :: Maybe (SpeechMarkTypeList), "Text" :: Text, "TextType" :: Maybe (TextType), "VoiceId" :: VoiceId } -> { "LexiconNames" :: Maybe (LexiconNameList), "OutputFormat" :: OutputFormat, "SampleRate" :: Maybe (SampleRate), "SpeechMarkTypes" :: Maybe (SpeechMarkTypeList), "Text" :: Text, "TextType" :: Maybe (TextType), "VoiceId" :: VoiceId }) -> SynthesizeSpeechInput
 ```
 
 Constructs SynthesizeSpeechInput's fields from required parameters
@@ -1142,7 +1142,7 @@ Constructs SynthesizeSpeechInput's fields from required parameters
 
 ``` purescript
 newtype SynthesizeSpeechOutput
-  = SynthesizeSpeechOutput { "AudioStream" :: NullOrUndefined (AudioStream), "ContentType" :: NullOrUndefined (ContentType), "RequestCharacters" :: NullOrUndefined (RequestCharacters) }
+  = SynthesizeSpeechOutput { "AudioStream" :: Maybe (AudioStream), "ContentType" :: Maybe (ContentType), "RequestCharacters" :: Maybe (RequestCharacters) }
 ```
 
 ##### Instances
@@ -1165,7 +1165,7 @@ Constructs SynthesizeSpeechOutput from required parameters
 #### `newSynthesizeSpeechOutput'`
 
 ``` purescript
-newSynthesizeSpeechOutput' :: ({ "AudioStream" :: NullOrUndefined (AudioStream), "ContentType" :: NullOrUndefined (ContentType), "RequestCharacters" :: NullOrUndefined (RequestCharacters) } -> { "AudioStream" :: NullOrUndefined (AudioStream), "ContentType" :: NullOrUndefined (ContentType), "RequestCharacters" :: NullOrUndefined (RequestCharacters) }) -> SynthesizeSpeechOutput
+newSynthesizeSpeechOutput' :: ({ "AudioStream" :: Maybe (AudioStream), "ContentType" :: Maybe (ContentType), "RequestCharacters" :: Maybe (RequestCharacters) } -> { "AudioStream" :: Maybe (AudioStream), "ContentType" :: Maybe (ContentType), "RequestCharacters" :: Maybe (RequestCharacters) }) -> SynthesizeSpeechOutput
 ```
 
 Constructs SynthesizeSpeechOutput's fields from required parameters
@@ -1190,7 +1190,7 @@ Encode Text
 
 ``` purescript
 newtype TextLengthExceededException
-  = TextLengthExceededException { message :: NullOrUndefined (ErrorMessage) }
+  = TextLengthExceededException { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The value of the "Text" parameter is longer than the accepted limits. The limit for input text is a maximum of 3000 characters total, of which no more than 1500 can be billed characters. SSML tags are not counted as billed characters.</p>
@@ -1215,7 +1215,7 @@ Constructs TextLengthExceededException from required parameters
 #### `newTextLengthExceededException'`
 
 ``` purescript
-newTextLengthExceededException' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> TextLengthExceededException
+newTextLengthExceededException' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> TextLengthExceededException
 ```
 
 Constructs TextLengthExceededException's fields from required parameters
@@ -1240,7 +1240,7 @@ Encode TextType
 
 ``` purescript
 newtype UnsupportedPlsAlphabetException
-  = UnsupportedPlsAlphabetException { message :: NullOrUndefined (ErrorMessage) }
+  = UnsupportedPlsAlphabetException { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The alphabet specified by the lexicon is not a supported alphabet. Valid values are <code>x-sampa</code> and <code>ipa</code>.</p>
@@ -1265,7 +1265,7 @@ Constructs UnsupportedPlsAlphabetException from required parameters
 #### `newUnsupportedPlsAlphabetException'`
 
 ``` purescript
-newUnsupportedPlsAlphabetException' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> UnsupportedPlsAlphabetException
+newUnsupportedPlsAlphabetException' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> UnsupportedPlsAlphabetException
 ```
 
 Constructs UnsupportedPlsAlphabetException's fields from required parameters
@@ -1274,7 +1274,7 @@ Constructs UnsupportedPlsAlphabetException's fields from required parameters
 
 ``` purescript
 newtype UnsupportedPlsLanguageException
-  = UnsupportedPlsLanguageException { message :: NullOrUndefined (ErrorMessage) }
+  = UnsupportedPlsLanguageException { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The language specified in the lexicon is unsupported. For a list of supported languages, see <a href="http://docs.aws.amazon.com/polly/latest/dg/API_LexiconAttributes.html">Lexicon Attributes</a>.</p>
@@ -1299,7 +1299,7 @@ Constructs UnsupportedPlsLanguageException from required parameters
 #### `newUnsupportedPlsLanguageException'`
 
 ``` purescript
-newUnsupportedPlsLanguageException' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> UnsupportedPlsLanguageException
+newUnsupportedPlsLanguageException' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> UnsupportedPlsLanguageException
 ```
 
 Constructs UnsupportedPlsLanguageException's fields from required parameters
@@ -1308,7 +1308,7 @@ Constructs UnsupportedPlsLanguageException's fields from required parameters
 
 ``` purescript
 newtype Voice
-  = Voice { "Gender" :: NullOrUndefined (Gender), "Id" :: NullOrUndefined (VoiceId), "LanguageCode" :: NullOrUndefined (LanguageCode), "LanguageName" :: NullOrUndefined (LanguageName), "Name" :: NullOrUndefined (VoiceName) }
+  = Voice { "Gender" :: Maybe (Gender), "Id" :: Maybe (VoiceId), "LanguageCode" :: Maybe (LanguageCode), "LanguageName" :: Maybe (LanguageName), "Name" :: Maybe (VoiceName) }
 ```
 
 <p>Description of the voice.</p>
@@ -1333,7 +1333,7 @@ Constructs Voice from required parameters
 #### `newVoice'`
 
 ``` purescript
-newVoice' :: ({ "Gender" :: NullOrUndefined (Gender), "Id" :: NullOrUndefined (VoiceId), "LanguageCode" :: NullOrUndefined (LanguageCode), "LanguageName" :: NullOrUndefined (LanguageName), "Name" :: NullOrUndefined (VoiceName) } -> { "Gender" :: NullOrUndefined (Gender), "Id" :: NullOrUndefined (VoiceId), "LanguageCode" :: NullOrUndefined (LanguageCode), "LanguageName" :: NullOrUndefined (LanguageName), "Name" :: NullOrUndefined (VoiceName) }) -> Voice
+newVoice' :: ({ "Gender" :: Maybe (Gender), "Id" :: Maybe (VoiceId), "LanguageCode" :: Maybe (LanguageCode), "LanguageName" :: Maybe (LanguageName), "Name" :: Maybe (VoiceName) } -> { "Gender" :: Maybe (Gender), "Id" :: Maybe (VoiceId), "LanguageCode" :: Maybe (LanguageCode), "LanguageName" :: Maybe (LanguageName), "Name" :: Maybe (VoiceName) }) -> Voice
 ```
 
 Constructs Voice's fields from required parameters

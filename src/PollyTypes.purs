@@ -5,7 +5,6 @@ import Prelude
 import Data.Foreign.Class (class Decode, class Encode)
 import Data.Foreign.Generic (defaultOptions, genericDecode, genericEncode)
 import Data.Foreign.Generic.Types (Options)
-import Data.Foreign.NullOrUndefined (NullOrUndefined(..))
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
 import Data.Maybe (Maybe(..))
@@ -75,8 +74,8 @@ instance encodeDeleteLexiconOutput :: Encode DeleteLexiconOutput where encode = 
 
 
 newtype DescribeVoicesInput = DescribeVoicesInput 
-  { "LanguageCode" :: NullOrUndefined (LanguageCode)
-  , "NextToken" :: NullOrUndefined (NextToken)
+  { "LanguageCode" :: Maybe (LanguageCode)
+  , "NextToken" :: Maybe (NextToken)
   }
 derive instance newtypeDescribeVoicesInput :: Newtype DescribeVoicesInput _
 derive instance repGenericDescribeVoicesInput :: Generic DescribeVoicesInput _
@@ -86,18 +85,18 @@ instance encodeDescribeVoicesInput :: Encode DescribeVoicesInput where encode = 
 
 -- | Constructs DescribeVoicesInput from required parameters
 newDescribeVoicesInput :: DescribeVoicesInput
-newDescribeVoicesInput  = DescribeVoicesInput { "LanguageCode": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newDescribeVoicesInput  = DescribeVoicesInput { "LanguageCode": Nothing, "NextToken": Nothing }
 
 -- | Constructs DescribeVoicesInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeVoicesInput' :: ( { "LanguageCode" :: NullOrUndefined (LanguageCode) , "NextToken" :: NullOrUndefined (NextToken) } -> {"LanguageCode" :: NullOrUndefined (LanguageCode) , "NextToken" :: NullOrUndefined (NextToken) } ) -> DescribeVoicesInput
-newDescribeVoicesInput'  customize = (DescribeVoicesInput <<< customize) { "LanguageCode": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newDescribeVoicesInput' :: ( { "LanguageCode" :: Maybe (LanguageCode) , "NextToken" :: Maybe (NextToken) } -> {"LanguageCode" :: Maybe (LanguageCode) , "NextToken" :: Maybe (NextToken) } ) -> DescribeVoicesInput
+newDescribeVoicesInput'  customize = (DescribeVoicesInput <<< customize) { "LanguageCode": Nothing, "NextToken": Nothing }
 
 
 
 newtype DescribeVoicesOutput = DescribeVoicesOutput 
-  { "Voices" :: NullOrUndefined (VoiceList)
-  , "NextToken" :: NullOrUndefined (NextToken)
+  { "Voices" :: Maybe (VoiceList)
+  , "NextToken" :: Maybe (NextToken)
   }
 derive instance newtypeDescribeVoicesOutput :: Newtype DescribeVoicesOutput _
 derive instance repGenericDescribeVoicesOutput :: Generic DescribeVoicesOutput _
@@ -107,12 +106,12 @@ instance encodeDescribeVoicesOutput :: Encode DescribeVoicesOutput where encode 
 
 -- | Constructs DescribeVoicesOutput from required parameters
 newDescribeVoicesOutput :: DescribeVoicesOutput
-newDescribeVoicesOutput  = DescribeVoicesOutput { "NextToken": (NullOrUndefined Nothing), "Voices": (NullOrUndefined Nothing) }
+newDescribeVoicesOutput  = DescribeVoicesOutput { "NextToken": Nothing, "Voices": Nothing }
 
 -- | Constructs DescribeVoicesOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeVoicesOutput' :: ( { "Voices" :: NullOrUndefined (VoiceList) , "NextToken" :: NullOrUndefined (NextToken) } -> {"Voices" :: NullOrUndefined (VoiceList) , "NextToken" :: NullOrUndefined (NextToken) } ) -> DescribeVoicesOutput
-newDescribeVoicesOutput'  customize = (DescribeVoicesOutput <<< customize) { "NextToken": (NullOrUndefined Nothing), "Voices": (NullOrUndefined Nothing) }
+newDescribeVoicesOutput' :: ( { "Voices" :: Maybe (VoiceList) , "NextToken" :: Maybe (NextToken) } -> {"Voices" :: Maybe (VoiceList) , "NextToken" :: Maybe (NextToken) } ) -> DescribeVoicesOutput
+newDescribeVoicesOutput'  customize = (DescribeVoicesOutput <<< customize) { "NextToken": Nothing, "Voices": Nothing }
 
 
 
@@ -155,8 +154,8 @@ newGetLexiconInput' _Name customize = (GetLexiconInput <<< customize) { "Name": 
 
 
 newtype GetLexiconOutput = GetLexiconOutput 
-  { "Lexicon" :: NullOrUndefined (Lexicon)
-  , "LexiconAttributes" :: NullOrUndefined (LexiconAttributes)
+  { "Lexicon" :: Maybe (Lexicon)
+  , "LexiconAttributes" :: Maybe (LexiconAttributes)
   }
 derive instance newtypeGetLexiconOutput :: Newtype GetLexiconOutput _
 derive instance repGenericGetLexiconOutput :: Generic GetLexiconOutput _
@@ -166,18 +165,18 @@ instance encodeGetLexiconOutput :: Encode GetLexiconOutput where encode = generi
 
 -- | Constructs GetLexiconOutput from required parameters
 newGetLexiconOutput :: GetLexiconOutput
-newGetLexiconOutput  = GetLexiconOutput { "Lexicon": (NullOrUndefined Nothing), "LexiconAttributes": (NullOrUndefined Nothing) }
+newGetLexiconOutput  = GetLexiconOutput { "Lexicon": Nothing, "LexiconAttributes": Nothing }
 
 -- | Constructs GetLexiconOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetLexiconOutput' :: ( { "Lexicon" :: NullOrUndefined (Lexicon) , "LexiconAttributes" :: NullOrUndefined (LexiconAttributes) } -> {"Lexicon" :: NullOrUndefined (Lexicon) , "LexiconAttributes" :: NullOrUndefined (LexiconAttributes) } ) -> GetLexiconOutput
-newGetLexiconOutput'  customize = (GetLexiconOutput <<< customize) { "Lexicon": (NullOrUndefined Nothing), "LexiconAttributes": (NullOrUndefined Nothing) }
+newGetLexiconOutput' :: ( { "Lexicon" :: Maybe (Lexicon) , "LexiconAttributes" :: Maybe (LexiconAttributes) } -> {"Lexicon" :: Maybe (Lexicon) , "LexiconAttributes" :: Maybe (LexiconAttributes) } ) -> GetLexiconOutput
+newGetLexiconOutput'  customize = (GetLexiconOutput <<< customize) { "Lexicon": Nothing, "LexiconAttributes": Nothing }
 
 
 
 -- | <p>Amazon Polly can't find the specified lexicon. Verify that the lexicon's name is spelled correctly, and then try again.</p>
 newtype InvalidLexiconException = InvalidLexiconException 
-  { "message" :: NullOrUndefined (ErrorMessage)
+  { "message" :: Maybe (ErrorMessage)
   }
 derive instance newtypeInvalidLexiconException :: Newtype InvalidLexiconException _
 derive instance repGenericInvalidLexiconException :: Generic InvalidLexiconException _
@@ -187,18 +186,18 @@ instance encodeInvalidLexiconException :: Encode InvalidLexiconException where e
 
 -- | Constructs InvalidLexiconException from required parameters
 newInvalidLexiconException :: InvalidLexiconException
-newInvalidLexiconException  = InvalidLexiconException { "message": (NullOrUndefined Nothing) }
+newInvalidLexiconException  = InvalidLexiconException { "message": Nothing }
 
 -- | Constructs InvalidLexiconException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInvalidLexiconException' :: ( { "message" :: NullOrUndefined (ErrorMessage) } -> {"message" :: NullOrUndefined (ErrorMessage) } ) -> InvalidLexiconException
-newInvalidLexiconException'  customize = (InvalidLexiconException <<< customize) { "message": (NullOrUndefined Nothing) }
+newInvalidLexiconException' :: ( { "message" :: Maybe (ErrorMessage) } -> {"message" :: Maybe (ErrorMessage) } ) -> InvalidLexiconException
+newInvalidLexiconException'  customize = (InvalidLexiconException <<< customize) { "message": Nothing }
 
 
 
 -- | <p>The NextToken is invalid. Verify that it's spelled correctly, and then try again.</p>
 newtype InvalidNextTokenException = InvalidNextTokenException 
-  { "message" :: NullOrUndefined (ErrorMessage)
+  { "message" :: Maybe (ErrorMessage)
   }
 derive instance newtypeInvalidNextTokenException :: Newtype InvalidNextTokenException _
 derive instance repGenericInvalidNextTokenException :: Generic InvalidNextTokenException _
@@ -208,18 +207,18 @@ instance encodeInvalidNextTokenException :: Encode InvalidNextTokenException whe
 
 -- | Constructs InvalidNextTokenException from required parameters
 newInvalidNextTokenException :: InvalidNextTokenException
-newInvalidNextTokenException  = InvalidNextTokenException { "message": (NullOrUndefined Nothing) }
+newInvalidNextTokenException  = InvalidNextTokenException { "message": Nothing }
 
 -- | Constructs InvalidNextTokenException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInvalidNextTokenException' :: ( { "message" :: NullOrUndefined (ErrorMessage) } -> {"message" :: NullOrUndefined (ErrorMessage) } ) -> InvalidNextTokenException
-newInvalidNextTokenException'  customize = (InvalidNextTokenException <<< customize) { "message": (NullOrUndefined Nothing) }
+newInvalidNextTokenException' :: ( { "message" :: Maybe (ErrorMessage) } -> {"message" :: Maybe (ErrorMessage) } ) -> InvalidNextTokenException
+newInvalidNextTokenException'  customize = (InvalidNextTokenException <<< customize) { "message": Nothing }
 
 
 
 -- | <p>The specified sample rate is not valid.</p>
 newtype InvalidSampleRateException = InvalidSampleRateException 
-  { "message" :: NullOrUndefined (ErrorMessage)
+  { "message" :: Maybe (ErrorMessage)
   }
 derive instance newtypeInvalidSampleRateException :: Newtype InvalidSampleRateException _
 derive instance repGenericInvalidSampleRateException :: Generic InvalidSampleRateException _
@@ -229,18 +228,18 @@ instance encodeInvalidSampleRateException :: Encode InvalidSampleRateException w
 
 -- | Constructs InvalidSampleRateException from required parameters
 newInvalidSampleRateException :: InvalidSampleRateException
-newInvalidSampleRateException  = InvalidSampleRateException { "message": (NullOrUndefined Nothing) }
+newInvalidSampleRateException  = InvalidSampleRateException { "message": Nothing }
 
 -- | Constructs InvalidSampleRateException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInvalidSampleRateException' :: ( { "message" :: NullOrUndefined (ErrorMessage) } -> {"message" :: NullOrUndefined (ErrorMessage) } ) -> InvalidSampleRateException
-newInvalidSampleRateException'  customize = (InvalidSampleRateException <<< customize) { "message": (NullOrUndefined Nothing) }
+newInvalidSampleRateException' :: ( { "message" :: Maybe (ErrorMessage) } -> {"message" :: Maybe (ErrorMessage) } ) -> InvalidSampleRateException
+newInvalidSampleRateException'  customize = (InvalidSampleRateException <<< customize) { "message": Nothing }
 
 
 
 -- | <p>The SSML you provided is invalid. Verify the SSML syntax, spelling of tags and values, and then try again.</p>
 newtype InvalidSsmlException = InvalidSsmlException 
-  { "message" :: NullOrUndefined (ErrorMessage)
+  { "message" :: Maybe (ErrorMessage)
   }
 derive instance newtypeInvalidSsmlException :: Newtype InvalidSsmlException _
 derive instance repGenericInvalidSsmlException :: Generic InvalidSsmlException _
@@ -250,12 +249,12 @@ instance encodeInvalidSsmlException :: Encode InvalidSsmlException where encode 
 
 -- | Constructs InvalidSsmlException from required parameters
 newInvalidSsmlException :: InvalidSsmlException
-newInvalidSsmlException  = InvalidSsmlException { "message": (NullOrUndefined Nothing) }
+newInvalidSsmlException  = InvalidSsmlException { "message": Nothing }
 
 -- | Constructs InvalidSsmlException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInvalidSsmlException' :: ( { "message" :: NullOrUndefined (ErrorMessage) } -> {"message" :: NullOrUndefined (ErrorMessage) } ) -> InvalidSsmlException
-newInvalidSsmlException'  customize = (InvalidSsmlException <<< customize) { "message": (NullOrUndefined Nothing) }
+newInvalidSsmlException' :: ( { "message" :: Maybe (ErrorMessage) } -> {"message" :: Maybe (ErrorMessage) } ) -> InvalidSsmlException
+newInvalidSsmlException'  customize = (InvalidSsmlException <<< customize) { "message": Nothing }
 
 
 
@@ -297,8 +296,8 @@ instance encodeLexemesCount :: Encode LexemesCount where encode = genericEncode 
 
 -- | <p>Provides lexicon name and lexicon content in string format. For more information, see <a href="https://www.w3.org/TR/pronunciation-lexicon/">Pronunciation Lexicon Specification (PLS) Version 1.0</a>.</p>
 newtype Lexicon = Lexicon 
-  { "Content" :: NullOrUndefined (LexiconContent)
-  , "Name" :: NullOrUndefined (LexiconName)
+  { "Content" :: Maybe (LexiconContent)
+  , "Name" :: Maybe (LexiconName)
   }
 derive instance newtypeLexicon :: Newtype Lexicon _
 derive instance repGenericLexicon :: Generic Lexicon _
@@ -308,12 +307,12 @@ instance encodeLexicon :: Encode Lexicon where encode = genericEncode options
 
 -- | Constructs Lexicon from required parameters
 newLexicon :: Lexicon
-newLexicon  = Lexicon { "Content": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newLexicon  = Lexicon { "Content": Nothing, "Name": Nothing }
 
 -- | Constructs Lexicon's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newLexicon' :: ( { "Content" :: NullOrUndefined (LexiconContent) , "Name" :: NullOrUndefined (LexiconName) } -> {"Content" :: NullOrUndefined (LexiconContent) , "Name" :: NullOrUndefined (LexiconName) } ) -> Lexicon
-newLexicon'  customize = (Lexicon <<< customize) { "Content": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newLexicon' :: ( { "Content" :: Maybe (LexiconContent) , "Name" :: Maybe (LexiconName) } -> {"Content" :: Maybe (LexiconContent) , "Name" :: Maybe (LexiconName) } ) -> Lexicon
+newLexicon'  customize = (Lexicon <<< customize) { "Content": Nothing, "Name": Nothing }
 
 
 
@@ -328,12 +327,12 @@ instance encodeLexiconArn :: Encode LexiconArn where encode = genericEncode opti
 
 -- | <p>Contains metadata describing the lexicon such as the number of lexemes, language code, and so on. For more information, see <a href="http://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html">Managing Lexicons</a>.</p>
 newtype LexiconAttributes = LexiconAttributes 
-  { "Alphabet" :: NullOrUndefined (Alphabet)
-  , "LanguageCode" :: NullOrUndefined (LanguageCode)
-  , "LastModified" :: NullOrUndefined (LastModified)
-  , "LexiconArn" :: NullOrUndefined (LexiconArn)
-  , "LexemesCount" :: NullOrUndefined (LexemesCount)
-  , "Size" :: NullOrUndefined (Size)
+  { "Alphabet" :: Maybe (Alphabet)
+  , "LanguageCode" :: Maybe (LanguageCode)
+  , "LastModified" :: Maybe (LastModified)
+  , "LexiconArn" :: Maybe (LexiconArn)
+  , "LexemesCount" :: Maybe (LexemesCount)
+  , "Size" :: Maybe (Size)
   }
 derive instance newtypeLexiconAttributes :: Newtype LexiconAttributes _
 derive instance repGenericLexiconAttributes :: Generic LexiconAttributes _
@@ -343,12 +342,12 @@ instance encodeLexiconAttributes :: Encode LexiconAttributes where encode = gene
 
 -- | Constructs LexiconAttributes from required parameters
 newLexiconAttributes :: LexiconAttributes
-newLexiconAttributes  = LexiconAttributes { "Alphabet": (NullOrUndefined Nothing), "LanguageCode": (NullOrUndefined Nothing), "LastModified": (NullOrUndefined Nothing), "LexemesCount": (NullOrUndefined Nothing), "LexiconArn": (NullOrUndefined Nothing), "Size": (NullOrUndefined Nothing) }
+newLexiconAttributes  = LexiconAttributes { "Alphabet": Nothing, "LanguageCode": Nothing, "LastModified": Nothing, "LexemesCount": Nothing, "LexiconArn": Nothing, "Size": Nothing }
 
 -- | Constructs LexiconAttributes's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newLexiconAttributes' :: ( { "Alphabet" :: NullOrUndefined (Alphabet) , "LanguageCode" :: NullOrUndefined (LanguageCode) , "LastModified" :: NullOrUndefined (LastModified) , "LexiconArn" :: NullOrUndefined (LexiconArn) , "LexemesCount" :: NullOrUndefined (LexemesCount) , "Size" :: NullOrUndefined (Size) } -> {"Alphabet" :: NullOrUndefined (Alphabet) , "LanguageCode" :: NullOrUndefined (LanguageCode) , "LastModified" :: NullOrUndefined (LastModified) , "LexiconArn" :: NullOrUndefined (LexiconArn) , "LexemesCount" :: NullOrUndefined (LexemesCount) , "Size" :: NullOrUndefined (Size) } ) -> LexiconAttributes
-newLexiconAttributes'  customize = (LexiconAttributes <<< customize) { "Alphabet": (NullOrUndefined Nothing), "LanguageCode": (NullOrUndefined Nothing), "LastModified": (NullOrUndefined Nothing), "LexemesCount": (NullOrUndefined Nothing), "LexiconArn": (NullOrUndefined Nothing), "Size": (NullOrUndefined Nothing) }
+newLexiconAttributes' :: ( { "Alphabet" :: Maybe (Alphabet) , "LanguageCode" :: Maybe (LanguageCode) , "LastModified" :: Maybe (LastModified) , "LexiconArn" :: Maybe (LexiconArn) , "LexemesCount" :: Maybe (LexemesCount) , "Size" :: Maybe (Size) } -> {"Alphabet" :: Maybe (Alphabet) , "LanguageCode" :: Maybe (LanguageCode) , "LastModified" :: Maybe (LastModified) , "LexiconArn" :: Maybe (LexiconArn) , "LexemesCount" :: Maybe (LexemesCount) , "Size" :: Maybe (Size) } ) -> LexiconAttributes
+newLexiconAttributes'  customize = (LexiconAttributes <<< customize) { "Alphabet": Nothing, "LanguageCode": Nothing, "LastModified": Nothing, "LexemesCount": Nothing, "LexiconArn": Nothing, "Size": Nothing }
 
 
 
@@ -363,8 +362,8 @@ instance encodeLexiconContent :: Encode LexiconContent where encode = genericEnc
 
 -- | <p>Describes the content of the lexicon.</p>
 newtype LexiconDescription = LexiconDescription 
-  { "Name" :: NullOrUndefined (LexiconName)
-  , "Attributes" :: NullOrUndefined (LexiconAttributes)
+  { "Name" :: Maybe (LexiconName)
+  , "Attributes" :: Maybe (LexiconAttributes)
   }
 derive instance newtypeLexiconDescription :: Newtype LexiconDescription _
 derive instance repGenericLexiconDescription :: Generic LexiconDescription _
@@ -374,12 +373,12 @@ instance encodeLexiconDescription :: Encode LexiconDescription where encode = ge
 
 -- | Constructs LexiconDescription from required parameters
 newLexiconDescription :: LexiconDescription
-newLexiconDescription  = LexiconDescription { "Attributes": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newLexiconDescription  = LexiconDescription { "Attributes": Nothing, "Name": Nothing }
 
 -- | Constructs LexiconDescription's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newLexiconDescription' :: ( { "Name" :: NullOrUndefined (LexiconName) , "Attributes" :: NullOrUndefined (LexiconAttributes) } -> {"Name" :: NullOrUndefined (LexiconName) , "Attributes" :: NullOrUndefined (LexiconAttributes) } ) -> LexiconDescription
-newLexiconDescription'  customize = (LexiconDescription <<< customize) { "Attributes": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newLexiconDescription' :: ( { "Name" :: Maybe (LexiconName) , "Attributes" :: Maybe (LexiconAttributes) } -> {"Name" :: Maybe (LexiconName) , "Attributes" :: Maybe (LexiconAttributes) } ) -> LexiconDescription
+newLexiconDescription'  customize = (LexiconDescription <<< customize) { "Attributes": Nothing, "Name": Nothing }
 
 
 
@@ -412,7 +411,7 @@ instance encodeLexiconNameList :: Encode LexiconNameList where encode = genericE
 
 -- | <p>Amazon Polly can't find the specified lexicon. This could be caused by a lexicon that is missing, its name is misspelled or specifying a lexicon that is in a different region.</p> <p>Verify that the lexicon exists, is in the region (see <a>ListLexicons</a>) and that you spelled its name is spelled correctly. Then try again.</p>
 newtype LexiconNotFoundException = LexiconNotFoundException 
-  { "message" :: NullOrUndefined (ErrorMessage)
+  { "message" :: Maybe (ErrorMessage)
   }
 derive instance newtypeLexiconNotFoundException :: Newtype LexiconNotFoundException _
 derive instance repGenericLexiconNotFoundException :: Generic LexiconNotFoundException _
@@ -422,18 +421,18 @@ instance encodeLexiconNotFoundException :: Encode LexiconNotFoundException where
 
 -- | Constructs LexiconNotFoundException from required parameters
 newLexiconNotFoundException :: LexiconNotFoundException
-newLexiconNotFoundException  = LexiconNotFoundException { "message": (NullOrUndefined Nothing) }
+newLexiconNotFoundException  = LexiconNotFoundException { "message": Nothing }
 
 -- | Constructs LexiconNotFoundException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newLexiconNotFoundException' :: ( { "message" :: NullOrUndefined (ErrorMessage) } -> {"message" :: NullOrUndefined (ErrorMessage) } ) -> LexiconNotFoundException
-newLexiconNotFoundException'  customize = (LexiconNotFoundException <<< customize) { "message": (NullOrUndefined Nothing) }
+newLexiconNotFoundException' :: ( { "message" :: Maybe (ErrorMessage) } -> {"message" :: Maybe (ErrorMessage) } ) -> LexiconNotFoundException
+newLexiconNotFoundException'  customize = (LexiconNotFoundException <<< customize) { "message": Nothing }
 
 
 
 -- | <p>The maximum size of the specified lexicon would be exceeded by this operation.</p>
 newtype LexiconSizeExceededException = LexiconSizeExceededException 
-  { "message" :: NullOrUndefined (ErrorMessage)
+  { "message" :: Maybe (ErrorMessage)
   }
 derive instance newtypeLexiconSizeExceededException :: Newtype LexiconSizeExceededException _
 derive instance repGenericLexiconSizeExceededException :: Generic LexiconSizeExceededException _
@@ -443,17 +442,17 @@ instance encodeLexiconSizeExceededException :: Encode LexiconSizeExceededExcepti
 
 -- | Constructs LexiconSizeExceededException from required parameters
 newLexiconSizeExceededException :: LexiconSizeExceededException
-newLexiconSizeExceededException  = LexiconSizeExceededException { "message": (NullOrUndefined Nothing) }
+newLexiconSizeExceededException  = LexiconSizeExceededException { "message": Nothing }
 
 -- | Constructs LexiconSizeExceededException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newLexiconSizeExceededException' :: ( { "message" :: NullOrUndefined (ErrorMessage) } -> {"message" :: NullOrUndefined (ErrorMessage) } ) -> LexiconSizeExceededException
-newLexiconSizeExceededException'  customize = (LexiconSizeExceededException <<< customize) { "message": (NullOrUndefined Nothing) }
+newLexiconSizeExceededException' :: ( { "message" :: Maybe (ErrorMessage) } -> {"message" :: Maybe (ErrorMessage) } ) -> LexiconSizeExceededException
+newLexiconSizeExceededException'  customize = (LexiconSizeExceededException <<< customize) { "message": Nothing }
 
 
 
 newtype ListLexiconsInput = ListLexiconsInput 
-  { "NextToken" :: NullOrUndefined (NextToken)
+  { "NextToken" :: Maybe (NextToken)
   }
 derive instance newtypeListLexiconsInput :: Newtype ListLexiconsInput _
 derive instance repGenericListLexiconsInput :: Generic ListLexiconsInput _
@@ -463,18 +462,18 @@ instance encodeListLexiconsInput :: Encode ListLexiconsInput where encode = gene
 
 -- | Constructs ListLexiconsInput from required parameters
 newListLexiconsInput :: ListLexiconsInput
-newListLexiconsInput  = ListLexiconsInput { "NextToken": (NullOrUndefined Nothing) }
+newListLexiconsInput  = ListLexiconsInput { "NextToken": Nothing }
 
 -- | Constructs ListLexiconsInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListLexiconsInput' :: ( { "NextToken" :: NullOrUndefined (NextToken) } -> {"NextToken" :: NullOrUndefined (NextToken) } ) -> ListLexiconsInput
-newListLexiconsInput'  customize = (ListLexiconsInput <<< customize) { "NextToken": (NullOrUndefined Nothing) }
+newListLexiconsInput' :: ( { "NextToken" :: Maybe (NextToken) } -> {"NextToken" :: Maybe (NextToken) } ) -> ListLexiconsInput
+newListLexiconsInput'  customize = (ListLexiconsInput <<< customize) { "NextToken": Nothing }
 
 
 
 newtype ListLexiconsOutput = ListLexiconsOutput 
-  { "Lexicons" :: NullOrUndefined (LexiconDescriptionList)
-  , "NextToken" :: NullOrUndefined (NextToken)
+  { "Lexicons" :: Maybe (LexiconDescriptionList)
+  , "NextToken" :: Maybe (NextToken)
   }
 derive instance newtypeListLexiconsOutput :: Newtype ListLexiconsOutput _
 derive instance repGenericListLexiconsOutput :: Generic ListLexiconsOutput _
@@ -484,18 +483,18 @@ instance encodeListLexiconsOutput :: Encode ListLexiconsOutput where encode = ge
 
 -- | Constructs ListLexiconsOutput from required parameters
 newListLexiconsOutput :: ListLexiconsOutput
-newListLexiconsOutput  = ListLexiconsOutput { "Lexicons": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListLexiconsOutput  = ListLexiconsOutput { "Lexicons": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListLexiconsOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListLexiconsOutput' :: ( { "Lexicons" :: NullOrUndefined (LexiconDescriptionList) , "NextToken" :: NullOrUndefined (NextToken) } -> {"Lexicons" :: NullOrUndefined (LexiconDescriptionList) , "NextToken" :: NullOrUndefined (NextToken) } ) -> ListLexiconsOutput
-newListLexiconsOutput'  customize = (ListLexiconsOutput <<< customize) { "Lexicons": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListLexiconsOutput' :: ( { "Lexicons" :: Maybe (LexiconDescriptionList) , "NextToken" :: Maybe (NextToken) } -> {"Lexicons" :: Maybe (LexiconDescriptionList) , "NextToken" :: Maybe (NextToken) } ) -> ListLexiconsOutput
+newListLexiconsOutput'  customize = (ListLexiconsOutput <<< customize) { "Lexicons": Nothing, "NextToken": Nothing }
 
 
 
 -- | <p>Speech marks are not supported for the <code>OutputFormat</code> selected. Speech marks are only available for content in <code>json</code> format.</p>
 newtype MarksNotSupportedForFormatException = MarksNotSupportedForFormatException 
-  { "message" :: NullOrUndefined (ErrorMessage)
+  { "message" :: Maybe (ErrorMessage)
   }
 derive instance newtypeMarksNotSupportedForFormatException :: Newtype MarksNotSupportedForFormatException _
 derive instance repGenericMarksNotSupportedForFormatException :: Generic MarksNotSupportedForFormatException _
@@ -505,18 +504,18 @@ instance encodeMarksNotSupportedForFormatException :: Encode MarksNotSupportedFo
 
 -- | Constructs MarksNotSupportedForFormatException from required parameters
 newMarksNotSupportedForFormatException :: MarksNotSupportedForFormatException
-newMarksNotSupportedForFormatException  = MarksNotSupportedForFormatException { "message": (NullOrUndefined Nothing) }
+newMarksNotSupportedForFormatException  = MarksNotSupportedForFormatException { "message": Nothing }
 
 -- | Constructs MarksNotSupportedForFormatException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newMarksNotSupportedForFormatException' :: ( { "message" :: NullOrUndefined (ErrorMessage) } -> {"message" :: NullOrUndefined (ErrorMessage) } ) -> MarksNotSupportedForFormatException
-newMarksNotSupportedForFormatException'  customize = (MarksNotSupportedForFormatException <<< customize) { "message": (NullOrUndefined Nothing) }
+newMarksNotSupportedForFormatException' :: ( { "message" :: Maybe (ErrorMessage) } -> {"message" :: Maybe (ErrorMessage) } ) -> MarksNotSupportedForFormatException
+newMarksNotSupportedForFormatException'  customize = (MarksNotSupportedForFormatException <<< customize) { "message": Nothing }
 
 
 
 -- | <p>The maximum size of the lexeme would be exceeded by this operation.</p>
 newtype MaxLexemeLengthExceededException = MaxLexemeLengthExceededException 
-  { "message" :: NullOrUndefined (ErrorMessage)
+  { "message" :: Maybe (ErrorMessage)
   }
 derive instance newtypeMaxLexemeLengthExceededException :: Newtype MaxLexemeLengthExceededException _
 derive instance repGenericMaxLexemeLengthExceededException :: Generic MaxLexemeLengthExceededException _
@@ -526,18 +525,18 @@ instance encodeMaxLexemeLengthExceededException :: Encode MaxLexemeLengthExceede
 
 -- | Constructs MaxLexemeLengthExceededException from required parameters
 newMaxLexemeLengthExceededException :: MaxLexemeLengthExceededException
-newMaxLexemeLengthExceededException  = MaxLexemeLengthExceededException { "message": (NullOrUndefined Nothing) }
+newMaxLexemeLengthExceededException  = MaxLexemeLengthExceededException { "message": Nothing }
 
 -- | Constructs MaxLexemeLengthExceededException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newMaxLexemeLengthExceededException' :: ( { "message" :: NullOrUndefined (ErrorMessage) } -> {"message" :: NullOrUndefined (ErrorMessage) } ) -> MaxLexemeLengthExceededException
-newMaxLexemeLengthExceededException'  customize = (MaxLexemeLengthExceededException <<< customize) { "message": (NullOrUndefined Nothing) }
+newMaxLexemeLengthExceededException' :: ( { "message" :: Maybe (ErrorMessage) } -> {"message" :: Maybe (ErrorMessage) } ) -> MaxLexemeLengthExceededException
+newMaxLexemeLengthExceededException'  customize = (MaxLexemeLengthExceededException <<< customize) { "message": Nothing }
 
 
 
 -- | <p>The maximum number of lexicons would be exceeded by this operation.</p>
 newtype MaxLexiconsNumberExceededException = MaxLexiconsNumberExceededException 
-  { "message" :: NullOrUndefined (ErrorMessage)
+  { "message" :: Maybe (ErrorMessage)
   }
 derive instance newtypeMaxLexiconsNumberExceededException :: Newtype MaxLexiconsNumberExceededException _
 derive instance repGenericMaxLexiconsNumberExceededException :: Generic MaxLexiconsNumberExceededException _
@@ -547,12 +546,12 @@ instance encodeMaxLexiconsNumberExceededException :: Encode MaxLexiconsNumberExc
 
 -- | Constructs MaxLexiconsNumberExceededException from required parameters
 newMaxLexiconsNumberExceededException :: MaxLexiconsNumberExceededException
-newMaxLexiconsNumberExceededException  = MaxLexiconsNumberExceededException { "message": (NullOrUndefined Nothing) }
+newMaxLexiconsNumberExceededException  = MaxLexiconsNumberExceededException { "message": Nothing }
 
 -- | Constructs MaxLexiconsNumberExceededException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newMaxLexiconsNumberExceededException' :: ( { "message" :: NullOrUndefined (ErrorMessage) } -> {"message" :: NullOrUndefined (ErrorMessage) } ) -> MaxLexiconsNumberExceededException
-newMaxLexiconsNumberExceededException'  customize = (MaxLexiconsNumberExceededException <<< customize) { "message": (NullOrUndefined Nothing) }
+newMaxLexiconsNumberExceededException' :: ( { "message" :: Maybe (ErrorMessage) } -> {"message" :: Maybe (ErrorMessage) } ) -> MaxLexiconsNumberExceededException
+newMaxLexiconsNumberExceededException'  customize = (MaxLexiconsNumberExceededException <<< customize) { "message": Nothing }
 
 
 
@@ -624,7 +623,7 @@ instance encodeSampleRate :: Encode SampleRate where encode = genericEncode opti
 
 -- | <p>An unknown condition has caused a service failure.</p>
 newtype ServiceFailureException = ServiceFailureException 
-  { "message" :: NullOrUndefined (ErrorMessage)
+  { "message" :: Maybe (ErrorMessage)
   }
 derive instance newtypeServiceFailureException :: Newtype ServiceFailureException _
 derive instance repGenericServiceFailureException :: Generic ServiceFailureException _
@@ -634,12 +633,12 @@ instance encodeServiceFailureException :: Encode ServiceFailureException where e
 
 -- | Constructs ServiceFailureException from required parameters
 newServiceFailureException :: ServiceFailureException
-newServiceFailureException  = ServiceFailureException { "message": (NullOrUndefined Nothing) }
+newServiceFailureException  = ServiceFailureException { "message": Nothing }
 
 -- | Constructs ServiceFailureException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newServiceFailureException' :: ( { "message" :: NullOrUndefined (ErrorMessage) } -> {"message" :: NullOrUndefined (ErrorMessage) } ) -> ServiceFailureException
-newServiceFailureException'  customize = (ServiceFailureException <<< customize) { "message": (NullOrUndefined Nothing) }
+newServiceFailureException' :: ( { "message" :: Maybe (ErrorMessage) } -> {"message" :: Maybe (ErrorMessage) } ) -> ServiceFailureException
+newServiceFailureException'  customize = (ServiceFailureException <<< customize) { "message": Nothing }
 
 
 
@@ -672,7 +671,7 @@ instance encodeSpeechMarkTypeList :: Encode SpeechMarkTypeList where encode = ge
 
 -- | <p>SSML speech marks are not supported for plain text-type input.</p>
 newtype SsmlMarksNotSupportedForTextTypeException = SsmlMarksNotSupportedForTextTypeException 
-  { "message" :: NullOrUndefined (ErrorMessage)
+  { "message" :: Maybe (ErrorMessage)
   }
 derive instance newtypeSsmlMarksNotSupportedForTextTypeException :: Newtype SsmlMarksNotSupportedForTextTypeException _
 derive instance repGenericSsmlMarksNotSupportedForTextTypeException :: Generic SsmlMarksNotSupportedForTextTypeException _
@@ -682,22 +681,22 @@ instance encodeSsmlMarksNotSupportedForTextTypeException :: Encode SsmlMarksNotS
 
 -- | Constructs SsmlMarksNotSupportedForTextTypeException from required parameters
 newSsmlMarksNotSupportedForTextTypeException :: SsmlMarksNotSupportedForTextTypeException
-newSsmlMarksNotSupportedForTextTypeException  = SsmlMarksNotSupportedForTextTypeException { "message": (NullOrUndefined Nothing) }
+newSsmlMarksNotSupportedForTextTypeException  = SsmlMarksNotSupportedForTextTypeException { "message": Nothing }
 
 -- | Constructs SsmlMarksNotSupportedForTextTypeException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSsmlMarksNotSupportedForTextTypeException' :: ( { "message" :: NullOrUndefined (ErrorMessage) } -> {"message" :: NullOrUndefined (ErrorMessage) } ) -> SsmlMarksNotSupportedForTextTypeException
-newSsmlMarksNotSupportedForTextTypeException'  customize = (SsmlMarksNotSupportedForTextTypeException <<< customize) { "message": (NullOrUndefined Nothing) }
+newSsmlMarksNotSupportedForTextTypeException' :: ( { "message" :: Maybe (ErrorMessage) } -> {"message" :: Maybe (ErrorMessage) } ) -> SsmlMarksNotSupportedForTextTypeException
+newSsmlMarksNotSupportedForTextTypeException'  customize = (SsmlMarksNotSupportedForTextTypeException <<< customize) { "message": Nothing }
 
 
 
 newtype SynthesizeSpeechInput = SynthesizeSpeechInput 
-  { "LexiconNames" :: NullOrUndefined (LexiconNameList)
+  { "LexiconNames" :: Maybe (LexiconNameList)
   , "OutputFormat" :: (OutputFormat)
-  , "SampleRate" :: NullOrUndefined (SampleRate)
-  , "SpeechMarkTypes" :: NullOrUndefined (SpeechMarkTypeList)
+  , "SampleRate" :: Maybe (SampleRate)
+  , "SpeechMarkTypes" :: Maybe (SpeechMarkTypeList)
   , "Text" :: (Text)
-  , "TextType" :: NullOrUndefined (TextType)
+  , "TextType" :: Maybe (TextType)
   , "VoiceId" :: (VoiceId)
   }
 derive instance newtypeSynthesizeSpeechInput :: Newtype SynthesizeSpeechInput _
@@ -708,19 +707,19 @@ instance encodeSynthesizeSpeechInput :: Encode SynthesizeSpeechInput where encod
 
 -- | Constructs SynthesizeSpeechInput from required parameters
 newSynthesizeSpeechInput :: OutputFormat -> Text -> VoiceId -> SynthesizeSpeechInput
-newSynthesizeSpeechInput _OutputFormat _Text _VoiceId = SynthesizeSpeechInput { "OutputFormat": _OutputFormat, "Text": _Text, "VoiceId": _VoiceId, "LexiconNames": (NullOrUndefined Nothing), "SampleRate": (NullOrUndefined Nothing), "SpeechMarkTypes": (NullOrUndefined Nothing), "TextType": (NullOrUndefined Nothing) }
+newSynthesizeSpeechInput _OutputFormat _Text _VoiceId = SynthesizeSpeechInput { "OutputFormat": _OutputFormat, "Text": _Text, "VoiceId": _VoiceId, "LexiconNames": Nothing, "SampleRate": Nothing, "SpeechMarkTypes": Nothing, "TextType": Nothing }
 
 -- | Constructs SynthesizeSpeechInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSynthesizeSpeechInput' :: OutputFormat -> Text -> VoiceId -> ( { "LexiconNames" :: NullOrUndefined (LexiconNameList) , "OutputFormat" :: (OutputFormat) , "SampleRate" :: NullOrUndefined (SampleRate) , "SpeechMarkTypes" :: NullOrUndefined (SpeechMarkTypeList) , "Text" :: (Text) , "TextType" :: NullOrUndefined (TextType) , "VoiceId" :: (VoiceId) } -> {"LexiconNames" :: NullOrUndefined (LexiconNameList) , "OutputFormat" :: (OutputFormat) , "SampleRate" :: NullOrUndefined (SampleRate) , "SpeechMarkTypes" :: NullOrUndefined (SpeechMarkTypeList) , "Text" :: (Text) , "TextType" :: NullOrUndefined (TextType) , "VoiceId" :: (VoiceId) } ) -> SynthesizeSpeechInput
-newSynthesizeSpeechInput' _OutputFormat _Text _VoiceId customize = (SynthesizeSpeechInput <<< customize) { "OutputFormat": _OutputFormat, "Text": _Text, "VoiceId": _VoiceId, "LexiconNames": (NullOrUndefined Nothing), "SampleRate": (NullOrUndefined Nothing), "SpeechMarkTypes": (NullOrUndefined Nothing), "TextType": (NullOrUndefined Nothing) }
+newSynthesizeSpeechInput' :: OutputFormat -> Text -> VoiceId -> ( { "LexiconNames" :: Maybe (LexiconNameList) , "OutputFormat" :: (OutputFormat) , "SampleRate" :: Maybe (SampleRate) , "SpeechMarkTypes" :: Maybe (SpeechMarkTypeList) , "Text" :: (Text) , "TextType" :: Maybe (TextType) , "VoiceId" :: (VoiceId) } -> {"LexiconNames" :: Maybe (LexiconNameList) , "OutputFormat" :: (OutputFormat) , "SampleRate" :: Maybe (SampleRate) , "SpeechMarkTypes" :: Maybe (SpeechMarkTypeList) , "Text" :: (Text) , "TextType" :: Maybe (TextType) , "VoiceId" :: (VoiceId) } ) -> SynthesizeSpeechInput
+newSynthesizeSpeechInput' _OutputFormat _Text _VoiceId customize = (SynthesizeSpeechInput <<< customize) { "OutputFormat": _OutputFormat, "Text": _Text, "VoiceId": _VoiceId, "LexiconNames": Nothing, "SampleRate": Nothing, "SpeechMarkTypes": Nothing, "TextType": Nothing }
 
 
 
 newtype SynthesizeSpeechOutput = SynthesizeSpeechOutput 
-  { "AudioStream" :: NullOrUndefined (AudioStream)
-  , "ContentType" :: NullOrUndefined (ContentType)
-  , "RequestCharacters" :: NullOrUndefined (RequestCharacters)
+  { "AudioStream" :: Maybe (AudioStream)
+  , "ContentType" :: Maybe (ContentType)
+  , "RequestCharacters" :: Maybe (RequestCharacters)
   }
 derive instance newtypeSynthesizeSpeechOutput :: Newtype SynthesizeSpeechOutput _
 derive instance repGenericSynthesizeSpeechOutput :: Generic SynthesizeSpeechOutput _
@@ -730,12 +729,12 @@ instance encodeSynthesizeSpeechOutput :: Encode SynthesizeSpeechOutput where enc
 
 -- | Constructs SynthesizeSpeechOutput from required parameters
 newSynthesizeSpeechOutput :: SynthesizeSpeechOutput
-newSynthesizeSpeechOutput  = SynthesizeSpeechOutput { "AudioStream": (NullOrUndefined Nothing), "ContentType": (NullOrUndefined Nothing), "RequestCharacters": (NullOrUndefined Nothing) }
+newSynthesizeSpeechOutput  = SynthesizeSpeechOutput { "AudioStream": Nothing, "ContentType": Nothing, "RequestCharacters": Nothing }
 
 -- | Constructs SynthesizeSpeechOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSynthesizeSpeechOutput' :: ( { "AudioStream" :: NullOrUndefined (AudioStream) , "ContentType" :: NullOrUndefined (ContentType) , "RequestCharacters" :: NullOrUndefined (RequestCharacters) } -> {"AudioStream" :: NullOrUndefined (AudioStream) , "ContentType" :: NullOrUndefined (ContentType) , "RequestCharacters" :: NullOrUndefined (RequestCharacters) } ) -> SynthesizeSpeechOutput
-newSynthesizeSpeechOutput'  customize = (SynthesizeSpeechOutput <<< customize) { "AudioStream": (NullOrUndefined Nothing), "ContentType": (NullOrUndefined Nothing), "RequestCharacters": (NullOrUndefined Nothing) }
+newSynthesizeSpeechOutput' :: ( { "AudioStream" :: Maybe (AudioStream) , "ContentType" :: Maybe (ContentType) , "RequestCharacters" :: Maybe (RequestCharacters) } -> {"AudioStream" :: Maybe (AudioStream) , "ContentType" :: Maybe (ContentType) , "RequestCharacters" :: Maybe (RequestCharacters) } ) -> SynthesizeSpeechOutput
+newSynthesizeSpeechOutput'  customize = (SynthesizeSpeechOutput <<< customize) { "AudioStream": Nothing, "ContentType": Nothing, "RequestCharacters": Nothing }
 
 
 
@@ -750,7 +749,7 @@ instance encodeText :: Encode Text where encode = genericEncode options
 
 -- | <p>The value of the "Text" parameter is longer than the accepted limits. The limit for input text is a maximum of 3000 characters total, of which no more than 1500 can be billed characters. SSML tags are not counted as billed characters.</p>
 newtype TextLengthExceededException = TextLengthExceededException 
-  { "message" :: NullOrUndefined (ErrorMessage)
+  { "message" :: Maybe (ErrorMessage)
   }
 derive instance newtypeTextLengthExceededException :: Newtype TextLengthExceededException _
 derive instance repGenericTextLengthExceededException :: Generic TextLengthExceededException _
@@ -760,12 +759,12 @@ instance encodeTextLengthExceededException :: Encode TextLengthExceededException
 
 -- | Constructs TextLengthExceededException from required parameters
 newTextLengthExceededException :: TextLengthExceededException
-newTextLengthExceededException  = TextLengthExceededException { "message": (NullOrUndefined Nothing) }
+newTextLengthExceededException  = TextLengthExceededException { "message": Nothing }
 
 -- | Constructs TextLengthExceededException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newTextLengthExceededException' :: ( { "message" :: NullOrUndefined (ErrorMessage) } -> {"message" :: NullOrUndefined (ErrorMessage) } ) -> TextLengthExceededException
-newTextLengthExceededException'  customize = (TextLengthExceededException <<< customize) { "message": (NullOrUndefined Nothing) }
+newTextLengthExceededException' :: ( { "message" :: Maybe (ErrorMessage) } -> {"message" :: Maybe (ErrorMessage) } ) -> TextLengthExceededException
+newTextLengthExceededException'  customize = (TextLengthExceededException <<< customize) { "message": Nothing }
 
 
 
@@ -780,7 +779,7 @@ instance encodeTextType :: Encode TextType where encode = genericEncode options
 
 -- | <p>The alphabet specified by the lexicon is not a supported alphabet. Valid values are <code>x-sampa</code> and <code>ipa</code>.</p>
 newtype UnsupportedPlsAlphabetException = UnsupportedPlsAlphabetException 
-  { "message" :: NullOrUndefined (ErrorMessage)
+  { "message" :: Maybe (ErrorMessage)
   }
 derive instance newtypeUnsupportedPlsAlphabetException :: Newtype UnsupportedPlsAlphabetException _
 derive instance repGenericUnsupportedPlsAlphabetException :: Generic UnsupportedPlsAlphabetException _
@@ -790,18 +789,18 @@ instance encodeUnsupportedPlsAlphabetException :: Encode UnsupportedPlsAlphabetE
 
 -- | Constructs UnsupportedPlsAlphabetException from required parameters
 newUnsupportedPlsAlphabetException :: UnsupportedPlsAlphabetException
-newUnsupportedPlsAlphabetException  = UnsupportedPlsAlphabetException { "message": (NullOrUndefined Nothing) }
+newUnsupportedPlsAlphabetException  = UnsupportedPlsAlphabetException { "message": Nothing }
 
 -- | Constructs UnsupportedPlsAlphabetException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUnsupportedPlsAlphabetException' :: ( { "message" :: NullOrUndefined (ErrorMessage) } -> {"message" :: NullOrUndefined (ErrorMessage) } ) -> UnsupportedPlsAlphabetException
-newUnsupportedPlsAlphabetException'  customize = (UnsupportedPlsAlphabetException <<< customize) { "message": (NullOrUndefined Nothing) }
+newUnsupportedPlsAlphabetException' :: ( { "message" :: Maybe (ErrorMessage) } -> {"message" :: Maybe (ErrorMessage) } ) -> UnsupportedPlsAlphabetException
+newUnsupportedPlsAlphabetException'  customize = (UnsupportedPlsAlphabetException <<< customize) { "message": Nothing }
 
 
 
 -- | <p>The language specified in the lexicon is unsupported. For a list of supported languages, see <a href="http://docs.aws.amazon.com/polly/latest/dg/API_LexiconAttributes.html">Lexicon Attributes</a>.</p>
 newtype UnsupportedPlsLanguageException = UnsupportedPlsLanguageException 
-  { "message" :: NullOrUndefined (ErrorMessage)
+  { "message" :: Maybe (ErrorMessage)
   }
 derive instance newtypeUnsupportedPlsLanguageException :: Newtype UnsupportedPlsLanguageException _
 derive instance repGenericUnsupportedPlsLanguageException :: Generic UnsupportedPlsLanguageException _
@@ -811,22 +810,22 @@ instance encodeUnsupportedPlsLanguageException :: Encode UnsupportedPlsLanguageE
 
 -- | Constructs UnsupportedPlsLanguageException from required parameters
 newUnsupportedPlsLanguageException :: UnsupportedPlsLanguageException
-newUnsupportedPlsLanguageException  = UnsupportedPlsLanguageException { "message": (NullOrUndefined Nothing) }
+newUnsupportedPlsLanguageException  = UnsupportedPlsLanguageException { "message": Nothing }
 
 -- | Constructs UnsupportedPlsLanguageException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUnsupportedPlsLanguageException' :: ( { "message" :: NullOrUndefined (ErrorMessage) } -> {"message" :: NullOrUndefined (ErrorMessage) } ) -> UnsupportedPlsLanguageException
-newUnsupportedPlsLanguageException'  customize = (UnsupportedPlsLanguageException <<< customize) { "message": (NullOrUndefined Nothing) }
+newUnsupportedPlsLanguageException' :: ( { "message" :: Maybe (ErrorMessage) } -> {"message" :: Maybe (ErrorMessage) } ) -> UnsupportedPlsLanguageException
+newUnsupportedPlsLanguageException'  customize = (UnsupportedPlsLanguageException <<< customize) { "message": Nothing }
 
 
 
 -- | <p>Description of the voice.</p>
 newtype Voice = Voice 
-  { "Gender" :: NullOrUndefined (Gender)
-  , "Id" :: NullOrUndefined (VoiceId)
-  , "LanguageCode" :: NullOrUndefined (LanguageCode)
-  , "LanguageName" :: NullOrUndefined (LanguageName)
-  , "Name" :: NullOrUndefined (VoiceName)
+  { "Gender" :: Maybe (Gender)
+  , "Id" :: Maybe (VoiceId)
+  , "LanguageCode" :: Maybe (LanguageCode)
+  , "LanguageName" :: Maybe (LanguageName)
+  , "Name" :: Maybe (VoiceName)
   }
 derive instance newtypeVoice :: Newtype Voice _
 derive instance repGenericVoice :: Generic Voice _
@@ -836,12 +835,12 @@ instance encodeVoice :: Encode Voice where encode = genericEncode options
 
 -- | Constructs Voice from required parameters
 newVoice :: Voice
-newVoice  = Voice { "Gender": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LanguageCode": (NullOrUndefined Nothing), "LanguageName": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newVoice  = Voice { "Gender": Nothing, "Id": Nothing, "LanguageCode": Nothing, "LanguageName": Nothing, "Name": Nothing }
 
 -- | Constructs Voice's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newVoice' :: ( { "Gender" :: NullOrUndefined (Gender) , "Id" :: NullOrUndefined (VoiceId) , "LanguageCode" :: NullOrUndefined (LanguageCode) , "LanguageName" :: NullOrUndefined (LanguageName) , "Name" :: NullOrUndefined (VoiceName) } -> {"Gender" :: NullOrUndefined (Gender) , "Id" :: NullOrUndefined (VoiceId) , "LanguageCode" :: NullOrUndefined (LanguageCode) , "LanguageName" :: NullOrUndefined (LanguageName) , "Name" :: NullOrUndefined (VoiceName) } ) -> Voice
-newVoice'  customize = (Voice <<< customize) { "Gender": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LanguageCode": (NullOrUndefined Nothing), "LanguageName": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newVoice' :: ( { "Gender" :: Maybe (Gender) , "Id" :: Maybe (VoiceId) , "LanguageCode" :: Maybe (LanguageCode) , "LanguageName" :: Maybe (LanguageName) , "Name" :: Maybe (VoiceName) } -> {"Gender" :: Maybe (Gender) , "Id" :: Maybe (VoiceId) , "LanguageCode" :: Maybe (LanguageCode) , "LanguageName" :: Maybe (LanguageName) , "Name" :: Maybe (VoiceName) } ) -> Voice
+newVoice'  customize = (Voice <<< customize) { "Gender": Nothing, "Id": Nothing, "LanguageCode": Nothing, "LanguageName": Nothing, "Name": Nothing }
 
 
 
